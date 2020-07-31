@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pycharm file folders
+.idea/
+
+# Vscode file folders
+.vscode/
+
+# Experiment files
+data/
+utils/elmo_pretrained_model
+utils/stanford-corenlp-full-2018-10-05
+results/
+save/
+
+# log files
+*.log
+
