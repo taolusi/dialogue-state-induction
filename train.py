@@ -16,6 +16,10 @@ def main(args):
         raise AssertionError(
             "Task name should be included in [multiwoz21, dstc8].")
 
+    if cfg.batch_size == 1:
+        raise SystemExit(
+            "Exit!\nBatch size can not be set to 1 for BatchNorm1d used in pytorch!")
+
     cfg.model = args.model
 
     dataset_config = DATASET_CONFIG[args.task_name]
@@ -57,7 +61,8 @@ def main(args):
     print(f"ACC: {turn_metric.acc_score:.1%}, F1: {turn_metric.f1_score:.1%}, \
             P: {turn_metric.precision_score:.1%}, R: {turn_metric.recall_score:.1%}")
     print("Joint level metrics:")
-    print(f"ACC: {joint_metric.acc_score:.1%}, F1: {joint_metric.f1_score:.1%}, \
+    print(
+        f"ACC: {joint_metric.acc_score:.1%}, F1: {joint_metric.f1_score:.1%}, \
             P: {joint_metric.precision_score:.1%}, R: {joint_metric.recall_score:.1%}")
 
 
