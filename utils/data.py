@@ -140,7 +140,10 @@ class DataIterator:
         len_list = [len(list(candi)) for candi in candidates]
         max_len = max(len_list)
         sorted_index = np.argsort(len_list)[::-1]
-        fea_dim = features[sorted_index[0]][0].size()[0]
+        try:
+            fea_dim = features[sorted_index[0]][0].size()[0]
+        except IndexError:
+            print("Batch size is too small to to train, please use a larger batch size!")
 
         oh = []
         ce = []
