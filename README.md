@@ -1,5 +1,7 @@
 Code for paper ["Dialogue State Induction Using Neural Latent Variable Models"](https://www.ijcai.org/Proceedings/2020/0532.pdf), IJCAI 2020.
-Slides is available at [here](https://taolusi.github.io/qingkai_min/assets/pdf/20-ijcai-dsi_slides.pdf)
+
+Slides for presentation is available at [here](https://taolusi.github.io/qingkai_min/assets/pdf/20-ijcai-dsi_slides.pdf).
+
 # Dialogue State Induction (DSI)
 Dialogue state induction aims at automatically induce dialogue states from raw dialogues. We assume that there is a large set of dialogue records of many different domains, but without manual labeling of dialogue states. Such data are relatively easy to obtain, for example from customer service call records from different businesses. Consequently, we propose the task of **dialogue state induction** (DSI), which is to automatically induce slot-value pairs from raw dialogue data.
 The difference between DSI and DST is illustrated in Figure 1.
