@@ -42,7 +42,7 @@ def compute_acc(slot_values_ref, slot_values_hyp):
             value_hyp = slot_values_hyp[slot]
             cor = value_match(value_ref_list, value_hyp)
             list_cor.append(cor)
-        return np.mean(list_cor)
+        return np.prod(list_cor)
 
 
 def compute_prf(slot_values_ref, slot_values_hyp):
